@@ -14,7 +14,6 @@ configurable string gitconfig = ?;
 # bound to port `9090`.
 service / on new http:Listener(9090) {
 
-    # A resource for generating greetings
     # + return - string name with hello message or error
     resource function get gitStarts() returns Repo[]|error {
 
