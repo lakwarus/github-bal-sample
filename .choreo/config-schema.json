@@ -1,6 +1,26 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "lakmal": {
+      "type": "object",
+      "properties": {
+        "githubsample": {
+          "type": "object",
+          "properties": {
+            "gitconfig": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "gitconfig"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
   "additionalProperties": false
 }

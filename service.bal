@@ -8,7 +8,7 @@ type Repo record {
 };        
 
 
-
+configurable string gitconfig = ?;
 
 # A service representing a network-accessible API
 # bound to port `9090`.
@@ -21,7 +21,7 @@ service / on new http:Listener(9090) {
         // Send a response back to the caller.
         github:Client githubEp = check new (config = {
             auth: {
-                token: "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"
+                token: gitconfig
             }
         });
 
