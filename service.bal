@@ -28,7 +28,7 @@ service / on new http:Listener(9090) {
 
         Repo[]|error? repos = from var item in getRepositoriesResponse 
             where item is github:Repository
-            order by item.stargazerCount
+            order by item.stargazerCount descending
             limit 5
             select {
                 name: item.name,
